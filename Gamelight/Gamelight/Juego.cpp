@@ -125,6 +125,24 @@ bool game_over()
 
 	
 }
+bool bordessegundo()
+{
+	if (y3 == 2 || y3 == 42 || x3 == 2 || x3 == 117)
+
+		return false;
+
+	{
+
+		for (int j = tama3 - 1; j > 0; j--) {
+			if (luz3[j][0] == x3 && luz3[j][1] == y3)
+
+				return false;
+
+		}
+		return true;
+	}
+
+}
 void SavePcarrito() {
 	luz[RastrodeLuz][0] = x;luz[RastrodeLuz][1] = y; RastrodeLuz++;
 	if (RastrodeLuz == tama) 
@@ -410,6 +428,20 @@ void marco()
 	
 	
 }
+void Colision1()
+{
+	if ((x == x2) && (y == y2))
+	{
+		system("pause");
+	}
+}
+void Colision2()
+{
+	if ((x == x3) && (y == y3))
+	{
+		system("pause");
+	}
+}
 void Pantalla()
 {
 
@@ -506,7 +538,7 @@ void teclear3() {
 	   {
 		   dir3 = 1;
 	   }
-	  // if (y == 2 || y == 42 || x == 2 || x == 117)
+	   
 }
 
 
@@ -534,6 +566,7 @@ void Juego::StartPlayingSingle()
 			teclear2();
 			//teclear2();
 			//teclear2();
+			Colision1();
 			if (dir == 1) y--;
 			if (dir == 2) y++;
 			if (dir == 3) x++;
@@ -573,7 +606,7 @@ void Juego::StartPlayingMulti()
 
 
 
-	while (teclado != Pause && game_over())
+	while (teclado != Pause && game_over() && bordessegundo)
 	{
 		if (vidasingle == 3) {
 			//borrar_cuerpo();
@@ -595,13 +628,12 @@ void Juego::StartPlayingMulti()
 			if (dir == 3) x++;
 			if (dir == 4) x--;
 
-			
+			Colision2();
 			if (dir3 == 1) y3--;
 			if (dir3 == 2) y3++;
 			if (dir3 == 3) x3++;
 			if (dir3 == 4) x3--;
 			
-
 			Pantalla();
 		}
 
@@ -615,22 +647,3 @@ void Juego::StartPlayingMulti()
 
 	}
 }
-/*
-	cout << endl;
-	cout << endl;
-	SetWindowPos(GetConsoleWindow(), NULL, 400, 100, 750, 600, 0);     // Posicionamiento y Tamaño de la pantalla
-
-	cout << "\t VIDAS ---> " "\t" << "\t" << "\t \t \tPUNTAJE ---> " << endl;
-	
-								
-	
-	marco();
-	JugadorPlayerPrincipal2();
-	cout << endl;
-	cout << "\tPOTENCIADOR --->"<<potenciadores << "\t" << "\t" << "\t \t \tVELOCIDADES---> 00" << endl;
-	JugadorPlayerPrincipal();
-	
-
-
-}
-*/

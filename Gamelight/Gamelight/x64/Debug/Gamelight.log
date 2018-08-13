@@ -1,3 +1,4 @@
 ﻿  Juego.cpp
-c:\users\florentino garcia\desktop\universidad\unitec\programación iii\parcial i.i\gamelight\gamelight\juego.cpp(154): warning C4244: 'argumento': conversión de 'double' a 'DWORD'; posible pérdida de datos
+c:\users\florentino garcia\desktop\universidad\unitec\programación iii\parcial i.i\gamelight\gamelight\juego.cpp(172): warning C4244: 'argumento': conversión de 'double' a 'DWORD'; posible pérdida de datos
+c:\users\florentino garcia\desktop\universidad\unitec\programación iii\parcial i.i\gamelight\gamelight\juego.cpp(609): warning C4551: la llamada a la función no tiene lista de argumentos
   Gamelight.vcxproj -> C:\Users\FLORENTINO GARCIA\Desktop\Universidad\UNITEC\Programación III\Parcial I.I\Gamelight\x64\Debug\Gamelight.exe
